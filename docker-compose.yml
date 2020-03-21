@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+
+  todo:
+    build: .
+    image: kaes3kuch3n/todo:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - todo-net
+
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+    networks:
+      - todo-net
+
+volumes:
+  db-data:
+
+networks:
+  todo-net:

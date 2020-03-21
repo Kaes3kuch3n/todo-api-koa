@@ -1,0 +1,41 @@
+{
+  "name": "todo_api_koa",
+  "version": "1.0.0",
+  "description": "A simple todo list API using koa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/server.js",
+    "serve": "tsc-watch --onSuccess \"npm start\"",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Luis Hankel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/async-busboy": "^0.7.0",
+    "@types/koa": "^2.11.2",
+    "@types/koa-compress": "^2.0.9",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.4.0",
+    "@types/mongoose": "^5.7.7",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "acorn": "^6.4.1",
+    "async-busboy": "^0.7.0",
+    "koa": "^2.11.0",
+    "koa-compress": "latest",
+    "koa-logger": "latest",
+    "koa-router": "latest",
+    "mongoose": "latest"
+  }
+}
