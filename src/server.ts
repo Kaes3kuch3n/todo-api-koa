@@ -41,12 +41,7 @@ server.use(async (ctx, next) => {
 });
 
 // Setup database connection
-mongoose.connect(`mongodb://${db.hostname}:${db.port}/${db.database}`, {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-}).catch(error => {
+mongoose.connect(`mongodb://${db.hostname}:${db.port}/${db.database}`).catch(error => {
     console.error("MongoDB connection failed:\n", error);
     process.exit(1);
     return;
